@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style-type: none;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+.clr {
+    clear: both;
+}
+
+/*===== back to top css ========*/
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index:99;
+    display: none;
+}
+.back-to-top i{
+    width: 40px;
+    height: 40px;
+    background-color: purple;
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+/*============== navbar part css =============*/
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: all linear .3s;
+    z-index: 9999;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+.bg {
+    background-color: #2f3f42;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    animation: bg 1s;
+}
+@keyframes bg{
+    from{top:-50px}
+    to{top:0}
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.logo {
+    width: 170px;
+    float: left;
+}
+.menu {
+    width: 1000px;
+    float: right;
+    text-align: right;
+}
+.logo img {
+    padding-top: 34px;
+}
+.menu ul li {
+    display: inline-block;
+}
+.menu ul li a{
+    padding: 0 21px;
+    line-height: 90px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all linear .3s;
+    font-weight: 700;
+}
+.menu ul li:last-child a{
+    padding-right: 0;
+}
+.menu ul li a:hover {
+    color: #28b8d8;
+}
+/*============== banner part css ===============*/
+#banner {
+    background: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 332px;
+    padding-bottom: 250px;
+}
+.banner-content {
+    text-align: center;
+}
+.banner-content h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.banner-content h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 5px;
+}
+.banner-content p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+}
+/*=============== intro part css ===================*/
+#intro {
+    padding-top: 80px;
+}
+.intro-text {
+    text-align: center;
+}
+.intro-text h2 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: #444;
+    padding-bottom: 20px;
+}
+.intro-text p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+}
+/*=============== service part css ===================*/
+#service {
+    padding-top: 82px;
+    padding-bottom: 83px;
+}
+.heading {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.heading h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #444;
+    text-transform: uppercase;
+}
+.service-item {
+    width: 370px;
+    float: left;
+    padding: 15px;
+    border: 1px solid #e3e3e3;
+    text-align: center;
+    box-sizing: border-box;
+}
+.service-item img {
+    width: 100%;
+}
+.service-item h3 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #444;
+    padding-top: 16px;
+}
+.service-item p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    padding: 0 20px;
+    padding-top: 5px;
+}
+.mid-service {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+/*=============== gallery part css ===================*/
+
+.gal {
+    background-color: #2c2c2c;
+    padding-bottom: 47px;
+}
+.gal-heading {
+    padding-top: 50px;
+    padding-bottom: 44px;
+}
+.gal-heading h2 {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+.gal-heading h2:before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #535353;
+    left: -115px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.gal-heading h2:after {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #535353;
+    right: -115px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.gallery-item{
+    width: 25%;
+    float: left;
+}
+.gallery-item img {
+    width: 100%;
+}
+.gallery-btn {
+    text-align: center;
+    padding-top: 77px;
+}
+.gallery-btn a {
+    padding: 18px 20px;
+    border: 1px solid #797979;
+    color: #a6a6a6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+/*=============== journal part css ===================*/
+#journal {
+    padding-bottom: 80px;
+    padding-top: 47px;
+}
+.journal-head h2 {
+    color: #444;
+}
+#journal .gal-heading h2::before {
+	background-color: #d9d9d9;
+}
+#journal .gal-heading h2::after {
+	background-color: #d9d9d9;
+}
+.journal-item {
+    width: 370px;
+    float: left;
+    border:1px solid #e3e3e3;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.journal-item-top {
+    text-align: center;
+}
+.journal-item-top h3 {
+    font-size: 16px;
+    color: #444;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+.journal-item-top p {
+    font-size: 12px;
+    color: #999;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+}
+.journal-item img {
+    padding-top: 23px;
+    padding-bottom: 27px;
+}
+.journal-item-btm {
+    padding: 0 25px;
+}
+.journal-item-btm p {
+    font-size: 14px;
+    color: #666;
+    line-height: 22px;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+}
+.journal-item-btm a {
+    font-size: 11px;
+    color: #999;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+}
+.journal-item-btm a:after {
+    position: absolute;
+    content: '';
+    width: 102px;
+    height: 1px;
+    background-color: #28b8d8;
+    bottom: -5px;
+    left: 0;
+}
+.journal-item-btm h4 {
+    padding-top: 24px;
+}
+.journal-item-btm span {
+    float: right;
+    font-size: 11px;
+    color: #999;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+/*=============== little- part css ===================*/
+#little {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.little-left {
+    width: 570px;
+    margin-right: 30px;
+    float: left;
+}
+.little-right {
+    width: 570px;
+    float: left;
+}
+.little-head h2 {
+    color: #444;
+}
+#little .gal-heading h2::before {
+    display: none;
+}
+#little .little-head{
+    text-align: left;
+}
+.little-img {
+    float: left;
+    margin-right: 30px;
+    width: 196px;
+    margin-top: 5px;
+}
+.little-left-text {
+    width: 344px;
+    float: left;
+}
+.little-left-text h5 {
+    font-size: 18px;
+    color: #666;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    line-height: 28px;
+    padding-bottom: 12px;
+}
+.little-left-text p {
+    font-size: 14px;
+    color: #666;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    line-height: 24px;
+}
+.little-service-img {
+    width: 50px;
+    float: left;
+    text-align: center;
+    margin-right: 15px;
+}
+.little-service-text {
+    width: 505px;
+    float: left;
+}
+.little-service-text h4 {
+    font-size: 17px;
+    color: #444;
+    text-transform: capitalize;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+}
+.little-service-text p {
+    font-size: 14px;
+    color: #666;
+    font-family: 'Roboto', serif;
+    font-weight: 400;
+    line-height: 22px;
+    padding-top: 12px;
+    padding-right: 20px;
+}
+#little .gal-heading {
+    padding-bottom: 25px;
+}
+.little-service-main {
+    padding-bottom: 20px;
+}
+
+/*=============== intro part css ===================*/
+#footer {
+    background-color: #373737;
+    padding-top: 70px;
+    padding-bottom: 66px;
+}
+.footer-item {
+    width: 270px;
+    float: left;
+    margin-right: 30px;
+    box-sizing: border-box;
+}
+.footer-item h3 {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+}
+.footer-item p {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+}
+.footer-item i {
+    margin-right: 15px;
+    width: 30px;
+    float: left;
+    line-height: 24px;
+}
+.footer-item span {
+    width: 225px;
+    float: left;
+}
+.tahsan {
+    padding-top: 30px;
+}
+.footer-item h6 {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+}
+.footer-item-p p {
+    padding-bottom: 35px;
+}
+.mr-0 {
+    margin-right: 0!important;
+}
+/*=============== copyright part css ===================*/
+#copyright {
+    background-color: #333333;
+}
+.copyright-text p {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 90px;
+    margin-bottom: 0;
+}
+/*=============== intro part css ===================*/
+/*=============== intro part css ===================*/
+/*=============== intro part css ===================*/
